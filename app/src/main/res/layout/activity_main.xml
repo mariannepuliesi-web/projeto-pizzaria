@@ -13,19 +13,18 @@
         <!-- LOGO -->
 
         <!-- TEXTO -->
-
         <ImageView
-            android:layout_width="378dp"
-            android:layout_height="172dp"
-            android:scaleType="center"
-
+            android:layout_width="158dp"
+            android:layout_height="151dp"
+            android:layout_gravity="center"
             android:src="@drawable/pizza1" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Boa tarde 👋"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -43,28 +42,30 @@
             android:padding="12dp"
             android:background="#EEEEEE"/>
 
-        <!-- DESTAQUES (IMAGENS LADO A LADO) -->
-        <HorizontalScrollView
-            android:layout_width="162dp"
+        <!-- IMAGENS LADO A LADO -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:scrollbars="none">
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pizza2" />
 
-                <ImageView
-                    android:layout_width="160dp"
-                    android:layout_height="100dp"
-                    android:background="@drawable/bg_round"
-                    android:clipToOutline="true"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/pizza2" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pizza3" />
 
-            </LinearLayout>
-        </HorizontalScrollView>
+        </LinearLayout>
 
         <!-- CARDÁPIO -->
         <TextView
@@ -83,6 +84,12 @@
             android:background="#FFFFFF"
             android:layout_marginTop="10dp"
             android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="64dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pizza3" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -130,10 +137,8 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="64dp"
-                android:src="@drawable/pizza2"
                 android:scaleType="centerCrop"
-                android:background="@drawable/bg_round"
-                android:clipToOutline="true"/>
+                android:src="@drawable/pizza4" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -158,6 +163,153 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="R$ 58,00"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:backgroundTint="#E53935"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <!-- ITEM 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:background="#FFFFFF"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="64dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pizza5" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quatro queijos"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gorgonzola, queijos..."
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$ 64,00"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:backgroundTint="#E53935"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <!-- ITEM 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:background="#FFFFFF"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="64dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pizza6" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calabresa"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calabresa, cebola"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$ 60,00"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:backgroundTint="#E53935"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <!-- ITEM 5 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:background="#FFFFFF"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="64dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pizza7" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Portuguesa"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Presunto, ovo, cebola"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$ 72,00"/>
             </LinearLayout>
 
             <Button
